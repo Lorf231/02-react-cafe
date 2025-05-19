@@ -1,17 +1,15 @@
-import css from "./VoteStats.module.css"; // Виправлено 'modus' на 'module'
+import css from "./VoteStats.module.css";
+import Notification from "../Notification/Notification";
 import type { VoteStatsProps } from "../../types/VoteStatsPropsType";
 
 export default function VoteStats({ votes }: VoteStatsProps) {
-  const total = votes.good + votes.neutral + votes.bad;
-  const positivePercentage =
-    total > 0 ? ((votes.good / total) * 100).toFixed(1) : 0;
+  const totalVotes = votes.good + votes.neutral + votes.bad;
+  const positivePercentage = totalVotes
+    ? Math.round((votes.good / totalVotes) * 100)
+    : 0;
 
-  if (total === 0) {
-    return (
-      <div className={css.container}>
-        <p className={css.stat}>No feedback yet</p>
-      </div>
-    );
+  if (totalVotes === 0) {
+    return <Notification message="No feedback yet" />;
   }
 
   return (
@@ -26,7 +24,7 @@ export default function VoteStats({ votes }: VoteStatsProps) {
         Bad: <strong>{votes.bad}</strong>
       </p>
       <p className={css.stat}>
-        Total: <strong>{total}</strong>
+        Total: <strong>{totalVotes}</strong>
       </p>
       <p className={css.stat}>
         Positive: <strong>{positivePercentage}%</strong>
