@@ -10,6 +10,14 @@ export default function VoteStats({ votes }: VoteStatsProps) {
   const positivePercentage =
     total > 0 ? ((votes.good / total) * 100).toFixed(1) : 0;
 
+  if (total === 0) {
+    return (
+      <div className={css.container}>
+        <p className={css.stat}>No feedback yet</p>
+      </div>
+    );
+  }
+
   return (
     <div className={css.container}>
       <p className={css.stat}>
