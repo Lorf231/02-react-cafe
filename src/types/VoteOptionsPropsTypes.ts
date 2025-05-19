@@ -1,4 +1,4 @@
-import type { VoteTypes } from "./votes";
+import type { VoteTypes } from "./Votes";
 
 export interface VoteOptionsProps {
   votes: VoteTypes;
