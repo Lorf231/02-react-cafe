@@ -3,7 +3,7 @@ import css from "./App.module.css";
 import CafeInfo from "../CafeInfo/CafeInfo";
 import VoteOptions from "../VoteOptions/VoteOptions";
 import VoteStats from "../VoteStats/VoteStats";
-import type { VoteTypes } from "../../types/VoteTypes";
+import type { VoteTypes } from "../../types/Votes";
 
 export default function App() {
   const [votes, setVotes] = useState<VoteTypes>({
