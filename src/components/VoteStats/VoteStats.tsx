@@ -1,9 +1,5 @@
 import css from "./VoteStats.module.css"; // Виправлено 'modus' на 'module'
-import type { VoteTypes } from "../../types/VoteTypes";
-
-interface VoteStatsProps {
-  votes: VoteTypes;
-}
+import type { VoteStatsProps } from "../../types/VoteStatsPropsType";
 
 export default function VoteStats({ votes }: VoteStatsProps) {
   const total = votes.good + votes.neutral + votes.bad;
