@@ -1,5 +1,5 @@
 import css from "./VoteStats.module.css"; // Виправлено 'modus' на 'module'
-import type { VoteTypes } from "../../Types/VoteTypes";
+import type { VoteTypes } from "../../types/VoteTypes";
 
 interface VoteStatsProps {
   votes: VoteTypes;
