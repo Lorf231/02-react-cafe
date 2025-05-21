@@ -1,6 +1,6 @@
 import css from "./VoteStats.module.css";
 import Notification from "../Notification/Notification";
-import type { VoteStatsProps } from "../../test/VoteStatsPropsType";
+import type { VoteStatsProps } from "../../Types/voteStatsProps";
 
 export default function VoteStats({ votes }: VoteStatsProps) {
   const totalVotes = votes.good + votes.neutral + votes.bad;

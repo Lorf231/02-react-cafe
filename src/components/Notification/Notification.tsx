@@ -1,5 +1,5 @@
 import css from "./Notification.module.css";
-import type { NotificationProps } from "../../test/NotificationPropsTypes";
+import type { NotificationProps } from "../../Types/notificationProps";
 
 export default function Notification({ message }: NotificationProps) {
   return (
