@@ -1,6 +1,6 @@
 import css from "./VoteOptions.module.css";
-import type { VoteTypes } from "../../types/votes";
-import type { VoteOptionsProps } from "../../types/VoteOptionsPropsTypes";
+import type { VoteTypes } from "../../test/votes";
+import type { VoteOptionsProps } from "../../test/VoteOptionsPropsTypes";
 
 export default function VoteOptions({
   votes,
